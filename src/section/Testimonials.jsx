@@ -37,7 +37,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center gap-14 '>
+    <div className='flex flex-col justify-center items-center gap-14 overflow-hidden'>
       <div>
         <SectionHead icon={smileFace} title={"Testimonials"} />
       </div>
