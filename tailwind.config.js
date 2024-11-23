@@ -2,6 +2,10 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      Bricolage: ["Bricolage", "sans-serif"],
+      Satoshi: ["Satoshi", "sans-serif"],
+    },
     extend: {
       colors: {
         background: "#0C0C0C",

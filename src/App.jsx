@@ -1,37 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import About from "./section/About";
-import FAQs from "./section/FAQs";
-import Footer from "./section/Footer";
-import Hero from "./section/Hero";
-import Project from "./section/Project";
-import Stack from "./section/Stack";
-import Testimonials from "./section/Testimonials";
+import Landing from "./pages/Landing";
+import More from "./pages/More";
 
 export default function App() {
   return (
-    <h1 className=''>
+    <div className=''>
       <Navbar />
-      <section id='hero' className=' my-[70px] mx-[48px] max-md:mx-3'>
-        <Hero />
-      </section>
-      <section id='about' className=' my-[70px] mx-[48px] max-md:mx-3'>
-        <About />
-      </section>
-      <section id='projects' className=' my-[70px] mx-[48px] max-md:mx-3'>
-        <Project />
-      </section>
-      <section id='testimonials' className=' my-[70px] mx-[48px] max-md:mx-3'>
-        <Testimonials />
-      </section>
-      <section className=' my-[70px] mx-[48px] max-md:mx-3'>
-        <FAQs />
-      </section>
-      <section className=' my-[70px] mx-[48px] max-md:mx-3'>
-        <Stack />
-      </section>
-      <section id='contact'>
-        <Footer />
-      </section>
-    </h1>
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/more' element={<More />} />
+      </Routes>
+    </div>
   );
 }

@@ -37,8 +37,8 @@ const Stack = () => {
         </h3>
       </div>
       <div className='grid grid-cols-5 max-md:grid-cols-3 gap-3'>
-        {stacks.map((stack) => (
-          <img src={stack.imgUrl} alt='' />
+        {stacks.map((stack, i) => (
+          <img src={stack.imgUrl} alt='' key={i} />
         ))}
       </div>
     </div>

@@ -51,7 +51,7 @@ const Project = () => {
       <div className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12'>
         {/* Projects */}
         {projects.map((project, i) => (
-          <div className='border border-grayBorder rounded-xl'>
+          <div key={i} className='border border-grayBorder rounded-xl'>
             <div className='flex flex-col justify-center items-start gap-3'>
               <img src={project.imgUrl} alt='project' />
               <div className='px-4 py-2'>
@@ -64,12 +64,14 @@ const Project = () => {
       </div>
       <div className=' flex justify-between items-center w-full'>
         <h3 className='text-lg font-semibold'>Wanna See More?</h3>
-        <Button>
-          <div>View More</div>
-          <div>
-            <img src={arrow} alt='arrow' />
-          </div>
-        </Button>
+        <a href='/more'>
+          <Button>
+            <div>View More</div>
+            <div>
+              <img src={arrow} alt='arrow' />
+            </div>
+          </Button>
+        </a>
       </div>
     </div>
   );

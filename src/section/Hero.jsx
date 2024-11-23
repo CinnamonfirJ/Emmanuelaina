@@ -26,7 +26,7 @@ const Hero = () => {
           </Indicator>
         </div>
         <div className=' flex flex-col gap-5 justify-center items-start max-[1100px]:items-center max-[1100px]:mb-16 '>
-          <h1 className='max-[1100px]:text-center text-4xl font-bold'>
+          <h1 className='max-[1100px]:text-center text-4xl font-bold font-Bricolage'>
             Hello! <span className=' text-primary'>I’m Emmanuel Aina</span>
           </h1>
           <p className=' max-w-[500px] text-xl max-[1100px]:text-center'>
@@ -35,7 +35,9 @@ const Hero = () => {
             designs and a solid understanding of frontend development with HTML,
             CSS, and JavaScript, Curious to know more about me?
           </p>
-          <Button>View Projects</Button>
+          <a href='#projects'>
+            <Button>View Projects</Button>
+          </a>
         </div>
       </div>
 

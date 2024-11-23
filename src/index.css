@@ -7,6 +7,16 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Bricolage";
+  src: url("./assets/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Variable.ttf");
+}
+
 .custom-border {
   position: relative;
   text-align: center; /* Optional: To center the text content */
@@ -33,5 +43,6 @@
 }
 
 html {
+  font-family: "Bricolage";
   scroll-behavior: smooth;
 }

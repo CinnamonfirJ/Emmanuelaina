@@ -66,7 +66,11 @@ const Footer = () => {
         <div className=' flex justify-between items-censtartter p-5 gap-14'>
           <p className='text-base font-medium text-background text-start'>
             Designed By Me and Built by{" "}
-            <a href='/' className=' text-primary'>
+            <a
+              href='https://wa.link/aid0ca'
+              target='_blank'
+              className=' text-primary'
+            >
               Jesse Wisdom
             </a>
           </p>

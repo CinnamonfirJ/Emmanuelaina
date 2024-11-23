@@ -59,7 +59,10 @@ const About = () => {
         {/* Experience  */}
         <div className='grid grid-cols-4 max-md:grid-cols-2 gap-5 max-md:gap-12'>
           {skills.map((skill, i) => (
-            <div className='flex flex-col justify-center items-center gap-3'>
+            <div
+              key={i}
+              className='flex flex-col justify-center items-center gap-3'
+            >
               <div className='flex justify-center items-center rounded-full border border-grayBorder w-[60px] h-[60px]'>
                 <div className='flex justify-center items-center rounded-full w-[45px] h-[45px] bg-gradient-to-b from-primary to-secondary'>
                   <img src={skill.icon} alt='icon' />
@@ -76,7 +79,10 @@ const About = () => {
       {/* Experience */}
       <div className='grid grid-cols-3 max-md:grid-cols-1 gap-8 rounded-lg border max-w-[750px] pt-5 pb-3 px-2 border-grayBorder'>
         {experiences.map((experience, i) => (
-          <div className='flex flex-col justify-center items-center gap-3'>
+          <div
+            key={i}
+            className='flex flex-col justify-center items-center gap-3'
+          >
             <div className='flex flex-col justify-center items-center rounded-lg border custom-border border-grayBorder w-[220px] h-[138px]'>
               <div className='flex justify-center items-center rounded-full font-black text-6xl'>
                 <h1>{experience.number}</h1>
