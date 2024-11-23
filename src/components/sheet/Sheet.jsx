@@ -17,15 +17,15 @@ const Sheet = () => {
     },
     {
       name: "About Me",
-      link: "#about",
+      link: "/#about",
     },
     {
       name: "Projects",
-      link: "#projects",
+      link: "/#projects",
     },
     {
       name: "Testimonials",
-      link: "#testimonials",
+      link: "/#testimonials",
     },
   ];
 
