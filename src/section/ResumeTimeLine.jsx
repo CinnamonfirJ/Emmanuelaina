@@ -102,7 +102,7 @@ export default function ResumeTimeline() {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center gap-14 my-[70px] mx-[48px] max-md:mx-3'>
+    <div className='flex flex-col justify-center items-center gap-14 my-[70px] mx-[48px] max-md:mx-3 overflow-hidden'>
       <div className=' flex justify-between items-center max-lg:flex-col  gap-10'>
         <img src={pikaso} alt='' />
         <div className='relative flex flex-col justify-center items-start max-w-[730px] border border-grayBorder px-10 max-lg:px-2 rounded-3xl'>
