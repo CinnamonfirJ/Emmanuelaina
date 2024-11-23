@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-border {
+  position: relative;
+  text-align: center; /* Optional: To center the text content */
+  padding: 20px;
+}
+
+.custom-border::before,
+.custom-border::after {
+  content: "";
+  position: absolute;
+  width: 20%; /* Make the border span 20% of the div's width */
+  height: 3px; /* Adjust thickness of the border */
+  background-color: #864be7; /* Adjust border color */
+}
+
+.custom-border::before {
+  top: 0; /* Position at the top */
+  left: 40%; /* Center the border horizontally */
+}
+
+.custom-border::after {
+  bottom: 0; /* Position at the bottom */
+  left: 40%; /* Center the border horizontally */
+}
+
+html {
+  scroll-behavior: smooth;
+}
