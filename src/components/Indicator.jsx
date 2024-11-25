@@ -10,7 +10,7 @@ const Indicator = ({ variant, size, children, icon }) => {
       "border",
       "text-[18px]",
       "font-medium",
-      "gap-1",
+      "gap-2",
     ],
     {
       variants: {
@@ -32,13 +32,12 @@ const Indicator = ({ variant, size, children, icon }) => {
             "bg-background",
             "text-white",
             "text-nowrap",
-            // "min-w-[190px]",
             "rounded-full",
           ],
         },
         size: {
           default: ["px-2", "py-[2px]"],
-          large: ["px-4", "py-3"],
+          large: ["px-6", "py-3"],
         },
       },
       defaultVariants: {

@@ -29,7 +29,10 @@ const Navbar = () => {
         <div>
           <ul className='max-[940px]:hidden flex justify-center items-center gap-10 text-lg font-medium'>
             {links.map((link, i) => (
-              <li key={i} className=' text-white cursor-pointer'>
+              <li
+                key={i}
+                className=' text-white hover:text-primary hover:-translate-y-[2px] transform duration-100 ease-in cursor-pointer'
+              >
                 <a href={link.link}>{link.name}</a>
               </li>
             ))}

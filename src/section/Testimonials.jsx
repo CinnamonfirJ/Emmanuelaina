@@ -37,8 +37,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center gap-14 overflow-hidden'>
-      <div>
+    <div className='flex flex-col justify-center items-center gap-8 overflow-hidden'>
+      <div className='flex justify-center items-center w-full'>
         <SectionHead icon={smileFace} title={"Testimonials"} />
       </div>
 
@@ -46,32 +46,67 @@ const Testimonials = () => {
         <h3 className='text-4xl font-bold max-md:text-xl max-md:font-semibold'>
           What Clients Are Saying
         </h3>
-        <h3 className='text-xl font-bold max-w-[700px] max-md:text-base max-md:font-normal '>
+        <h3 className='text-xl font-bold max-w-[700px] text-background/90 max-md:text-base max-md:font-normal '>
           Hear from those who have experienced firdthand the impact of my
           user-centered, innopvative design solutions
         </h3>
       </div>
-      <div className=' flex justify-between items-center max-lg:flex-col  gap-10'>
+
+      {/* Image */}
+      <div className=' flex justify-between items-center max-lg:flex-col gap-10'>
         <img src={pikaso} alt='' />
-        <div className='relative flex flex-col justify-center items-start max-w-[730px] border border-grayBorder px-10 max-lg:px-2 rounded-3xl'>
-          <img
+        <div className='relative flex flex-col justify-center items-start max-w-[730px] border bg-[#F8FAFC] border-grayBorder px-10 max-lg:px-2 rounded-3xl'>
+          {/* <img
             src={qoute}
             alt='qoute'
-            className='absoulte top-[28px] -translate-y-[28px] -left-[470px] translate-x-[470px] max-w-[64px]'
-          />
-          <div className='flex gap-1 pb-4'>{stars}</div>
-          <p className='text-lg max-md:text-sm pb-6'>
-            “Emmanuel’s work on our crypto trading app was nothing short of
-            phenomenal. From the start, he demonstrated a deep understanding of
-            both the technical complexities and user needs. His design not only
-            transformed the app visually but also elevated the entire user
-            experience, making the intricate world of crypto trading feel simple
-            and approachable. His attention to detail, creativity, and
-            user-first approach truly set him apart. Our users rave about the
-            clean, seamless interface, Emmanuel’s unique ability to balance
-            creativity with functionality has undoubtedly taken our platform to
-            new heights, and we couldn’t be more thrilled with the results!”
-          </p>
+            className='absoulte top-[12px] -translate-y-[12px] -left-[470px] translate-x-[470px]'
+          /> */}
+          <div className='flex justify-end items-end w-full'>
+            <div className='absoulte top-[25px] -translate-y-[25px] -right-5'>
+              <svg
+                width='64'
+                height='47'
+                viewBox='0 0 64 47'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M17.2 24L18.6 23.6C17.8 24.4 16.8667 25 15.8 25.4C14.7333 25.8 13.3333 26 11.6 26C8.66667 26 6.06667 24.9333 3.8 22.8C1.53333 20.6667 0.400001 17.6667 0.400001 13.8C0.400001 9.93333 1.6 6.79999 4 4.39999C6.53333 1.86666 9.73333 0.59999 13.6 0.59999C17.6 0.59999 21 2.13332 23.8 5.19999C26.6 8.26666 28 12.5333 28 18C28 25.3333 25.7333 31.6667 21.2 37C16.6667 42.2 10.8667 45.2667 3.8 46.2V37.8C7.66667 37 10.8667 35.4 13.4 33C15.9333 30.6 17.2 27.6 17.2 24ZM52.8 24L54.4 23.6C53.6 24.4 52.6 25 51.4 25.4C50.3333 25.8 49 26 47.4 26C44.3333 26 41.6667 24.9333 39.4 22.8C37.1333 20.6667 36 17.6667 36 13.8C36 9.93333 37.2 6.79999 39.6 4.39999C42.1333 1.86666 45.3333 0.59999 49.2 0.59999C53.3333 0.59999 56.8 2.13332 59.6 5.19999C62.4 8.26666 63.8 12.5333 63.8 18C63.8 25.3333 61.4667 31.6667 56.8 37C52.2667 42.2 46.4667 45.2667 39.4 46.2V37.8C43.4 37 46.6 35.4 49 33C51.5333 30.6 52.8 27.6 52.8 24Z'
+                  fill='#864BE7'
+                />
+              </svg>
+            </div>
+          </div>
+          <div className='flex gap-1 pb-3'>{stars}</div>
+
+          <div>
+            <p className='text-lg max-md:text-sm pb-6 text-background'>
+              “Emmanuel’s work on our crypto trading app was nothing short of
+              phenomenal. From the start, he demonstrated a deep understanding
+              of both the technical complexities and user needs. His design not
+              only transformed the app visually but also elevated the entire
+              user experience, making the intricate world of crypto trading feel
+              simple and approachable. His attention to detail, creativity, and
+              user-first approach truly set him apart. Our users rave about the
+              clean, seamless interface, Emmanuel’s unique ability to balance
+              creativity with functionality has undoubtedly taken our platform
+              to new heights, and we couldn’t be more thrilled with the
+              results!”
+            </p>
+          </div>
+          <div className='pb-6 w-full'>
+            {/* <svg
+              width='601'
+              height='1'
+              viewBox='0 0 601 1'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <line y1='0.5' x2='601' y2='0.5' stroke='#000000' />
+            </svg> */}
+            <div className='h-[1px] bg-[#DDE5ED]'></div>
+          </div>
+
           <div className='flex justify-between items-center pb-6 w-full'>
             <div>
               <h3 className='text-2xl max-md:text-lg font-semibold'>

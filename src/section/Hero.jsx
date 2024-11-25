@@ -5,7 +5,7 @@ import starImage from "../assets/image 2.png";
 
 const Hero = () => {
   return (
-    <div className=' flex max-[1100px]:flex-col justify-between items-center'>
+    <div className=' flex max-[1100px]:flex-col gap-10 justify-center items-center'>
       <div className='flex flex-col gap-5'>
         <div className='flex  max-[1100px]:justify-center max-[1100px]:items-center'>
           <Indicator
@@ -29,7 +29,7 @@ const Hero = () => {
           <h1 className='max-[1100px]:text-center text-4xl font-bold font-Bricolage'>
             Hello! <span className=' text-primary'>I’m Emmanuel Aina</span>
           </h1>
-          <p className=' max-w-[500px] text-xl max-[1100px]:text-center'>
+          <p className=' max-w-[600px] text-xl max-[1100px]:text-center'>
             A product (UI/UX) designer specializing in web3, crypto, e-commerce,
             fintech, and gaming UI. I have a passion for creating user-friendly
             designs and a solid understanding of frontend development with HTML,

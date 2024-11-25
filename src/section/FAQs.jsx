@@ -39,8 +39,8 @@ const FAQs = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center gap-14 overflow-hidden'>
-      <div>
+    <div className='flex flex-col justify-center items-center gap-8 overflow-hidden'>
+      <div className='flex justify-center items-center w-full'>
         <SectionHead icon={faq} title={"FAQs"} />
       </div>
 

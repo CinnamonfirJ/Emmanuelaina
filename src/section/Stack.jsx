@@ -26,8 +26,8 @@ const Stack = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center gap-14'>
-      <div>
+    <div className='flex flex-col justify-center items-center gap-8'>
+      <div className='flex justify-center items-center w-full'>
         <SectionHead icon={tools} title={"Essential Stacks"} />
       </div>
 

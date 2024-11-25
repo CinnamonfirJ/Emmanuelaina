@@ -30,13 +30,13 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className='bg-[#F2F2F2] text-center pt-10 flex flex-col justify-center items-center gap-12'>
+    <footer className='bg-[#F2F2F2] text-center pt-10 flex flex-col justify-center items-center gap-8'>
       <div className='grid grid-cols-3 gap-8'>
         <div className='col-span-1'>
           <img src={left} alt='left' />
         </div>
         <div className='flex justify-center items-center'>
-          <h1 className='text-2xl max-md:text-lg font-medium tracking-wide'>
+          <h1 className='text-2xl text-nowrap max-md:text-lg font-medium tracking-wide'>
             Let’s Connect
           </h1>
         </div>
@@ -63,7 +63,7 @@ const Footer = () => {
       </div>
       <div className=' w-full text-sm text-gray-500'>
         <div className=' bg-[#DDE5ED]  w-full h-[1px] flex justify-center ' />
-        <div className=' flex justify-between items-censtartter p-5 gap-14'>
+        <div className=' flex justify-between items-start p-5 gap-14'>
           <p className='text-base font-medium text-background text-start'>
             Designed By Me and Built by{" "}
             <a
@@ -74,7 +74,7 @@ const Footer = () => {
               Jesse Wisdom
             </a>
           </p>
-          <p className='text-base flex-1 font-medium text-background min-w-[100px] '>
+          <p className='text-base font-medium text-background min-w-[100px] '>
             October 2024
           </p>
         </div>

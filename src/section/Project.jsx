@@ -18,7 +18,7 @@ const Project = () => {
     },
     {
       imgUrl: project2,
-      title: "l Management Dashboard",
+      title: "Admin Management Dashboard",
       category: "Fintech-Paid Project",
     },
     {
@@ -44,34 +44,43 @@ const Project = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center gap-14'>
-      <div>
+    <div className='flex flex-col justify-center items-center gap-8'>
+      <div className='flex justify-center items-center w-full'>
         <SectionHead icon={myProject} title={"Projects"} />
       </div>
       <div className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12'>
         {/* Projects */}
         {projects.map((project, i) => (
-          <div key={i} className='border border-grayBorder rounded-xl'>
-            <div className='flex flex-col justify-center items-start gap-3'>
+          <div
+            key={i}
+            className='border border-grayBorder rounded-xl bg-[#F8FAFC]'
+          >
+            <div className='flex flex-col justify-center items-start gap-2'>
               <img src={project.imgUrl} alt='project' />
-              <div className='px-4 py-2'>
+              <div className='flex flex-col justify-center items-start gap-3 px-4 py-1'>
                 <h3 className='text-xl font-semibold'>{project.title}</h3>
-                <p className='text-base font-medium'>{project.category}</p>
+                <p className='text-base text-background font-medium'>
+                  {project.category}
+                </p>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <div className=' flex justify-between items-center w-full'>
-        <h3 className='text-lg font-semibold'>Wanna See More?</h3>
-        <a href='/more'>
-          <Button>
-            <div>View More</div>
-            <div>
-              <img src={arrow} alt='arrow' />
-            </div>
-          </Button>
-        </a>
+      <div className=' flex justify-between items-center max-w-[1140px] w-full'>
+        <div>
+          <h3 className='text-lg font-semibold'>Wanna See More?</h3>
+        </div>
+        <div>
+          <a href='/'>
+            <Button>
+              <div>View More</div>
+              <div>
+                <img src={arrow} alt='arrow' />
+              </div>
+            </Button>
+          </a>
+        </div>
       </div>
     </div>
   );
