@@ -45,9 +45,12 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <span className='px-4 py-2 bg-[#F8FAFC] border border-[#DDE5ED] rounded-full text-base font-medium text-background'>
+        <a
+          href='mailto:ainae339@gmail.com'
+          className='px-4 py-2 bg-[#F8FAFC] border border-[#DDE5ED] rounded-full text-base font-medium text-background'
+        >
           ainae339@gmail.com
-        </span>
+        </a>
       </div>
       <div className='flex justify-center gap-4 '>
         {socials.map((social, i) => (
