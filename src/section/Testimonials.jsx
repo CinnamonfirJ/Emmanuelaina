@@ -1,3 +1,7 @@
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import smileFace from "../assets/cil_smile.png";
 import SectionHead from "../components/SectionHead";
 import pikaso from "../assets/pikaso_texttoimage_ceo-about-to-speak-in-a-video-looking-handsome-wit 1.png";
@@ -7,8 +11,16 @@ import qoute from "../assets/”.png";
 import user1 from "../assets/user-1.png";
 import user2 from "../assets/user-1.png";
 import user3 from "../assets/user-2.png";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+  }, []);
   let stars = [];
 
   for (let i = 0; i < 5; i++) {
@@ -36,13 +48,22 @@ const Testimonials = () => {
     },
   ];
 
+  // Duplicate testimonials for infinite scroll effect
+  const infiniteTestimonials = [...testimonials, ...testimonials];
+
   return (
     <div className='flex flex-col justify-center items-center gap-8 overflow-hidden'>
-      <div className='flex justify-center items-center w-full'>
+      <div
+        className='flex justify-center items-center w-full'
+        data-aos='fade-down'
+      >
         <SectionHead icon={smileFace} title={"Testimonials"} />
       </div>
 
-      <div className='flex flex-col justify-center text-center items-center gap-8'>
+      <div
+        className='flex flex-col justify-center text-center items-center gap-8'
+        data-aos='fade-up'
+      >
         <h3 className='text-4xl font-bold max-md:text-xl max-md:font-semibold'>
           What Clients Are Saying
         </h3>
@@ -53,9 +74,15 @@ const Testimonials = () => {
       </div>
 
       {/* Image */}
-      <div className=' flex justify-between items-center max-lg:flex-col gap-10'>
+      <div
+        className=' flex justify-between items-center max-lg:flex-col gap-10'
+        data-aos='flip-up'
+      >
         <img src={pikaso} alt='' />
-        <div className='relative flex flex-col justify-center items-start max-w-[730px] border bg-[#F8FAFC] border-grayBorder px-10 max-lg:px-2 rounded-3xl'>
+        <div
+          data-aos='flip-left'
+          className='relative flex flex-col justify-center items-start max-w-[730px] border bg-[#F8FAFC] border-grayBorder px-10 max-lg:px-2 rounded-3xl'
+        >
           {/* <img
             src={qoute}
             alt='qoute'
@@ -125,82 +152,103 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-      <div className='grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-8 mt-10 mb-10 '>
+      <div
+        className='relative gap-8 mt-10 mb-10'
+        data-aos='fade-up'
+        data-aos-delay='300'
+      >
         {/* <div className='  [mask-image:linear-gradient(to_right,transparent,white_10%,white_80%,transparent)] pointer-events-none'></div> */}
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className='relative flex flex-col justify-center gap-5 items-start text-background bg-[#F8FAFC] border border-[##DDE5ED] rounded-3xl p-3 md:p-5 hover:bg-accent hover:-translate-y-2 transition duration-500 max-w-xs md:max-w-md'
-          >
-            <div className=' flex justify-center items-center'>
-              <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
-                  fill='#F5DE15'
-                />
-              </svg>
-              <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
-                  fill='#F5DE15'
-                />
-              </svg>
-              <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
-                  fill='#F5DE15'
-                />
-              </svg>
-              <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
-                  fill='#F5DE15'
-                />
-              </svg>
-            </div>
-            <div className='text-sm tracking-tight'>{testimonial.text}</div>
-            <div className=' bg-[#DDE5ED]  w-full h-[1px] flex justify-center text-center ' />
-            <div className='flex items-center gap-3'>
-              <div className=' flex items-start '>
-                <img
-                  src={testimonial.imgUrl}
-                  alt={`Avatar for ${testimonial.name}`}
-                  className='h-[45px] w-[45px] rounded-full'
-                />
+        <motion.div
+          className='flex gap-5 flex-none '
+          animate={{ x: [0, -1000] }} // Animate from 0px to -1000px (adjust for actual card width)
+          transition={{
+            repeat: Infinity,
+            duration: 10,
+            ease: "linear",
+          }}
+        >
+          {[
+            ...testimonials,
+            ...testimonials,
+            ...testimonials,
+            ...testimonials,
+          ].map((testimonial, index) => (
+            <div
+              key={index}
+              className='relative flex flex-col justify-center gap-5 items-start min-w-[440px]  text-background bg-[#F8FAFC] border border-[##DDE5ED] rounded-3xl p-3 md:p-5 hover:bg-accent hover:-translate-y-2 transition duration-500  max-w-xs md:max-w-md'
+            >
+              <div className=' flex justify-center items-center'>
+                <svg
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
+                    fill='#F5DE15'
+                  />
+                </svg>
+                <svg
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
+                    fill='#F5DE15'
+                  />
+                </svg>
+                <svg
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
+                    fill='#F5DE15'
+                  />
+                </svg>
+                <svg
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    d='M7.32489 18.9231L8.56489 13.6101L4.44189 10.0381L9.87289 9.56813L11.9999 4.55713L14.1269 9.56713L19.5569 10.0371L15.4339 13.6091L16.6749 18.9221L11.9999 16.1021L7.32489 18.9231Z'
+                    fill='#F5DE15'
+                  />
+                </svg>
               </div>
-              <div>
-                <h3 className='text-black text-xl font-semibold'>
-                  {testimonial.name}
-                </h3>
-                <h3 className='text-base font-medium'>{testimonial.title}</h3>
+              <div className='text-sm tracking-tight min-w-[400px]'>
+                {testimonial.text}
+              </div>
+              <div className=' bg-[#DDE5ED]  w-full h-[1px] flex justify-center text-center ' />
+              <div className='flex items-center gap-3'>
+                <div className=' flex items-start '>
+                  <img
+                    src={testimonial.imgUrl}
+                    alt={`Avatar for ${testimonial.name}`}
+                    className='h-[45px] w-[45px] rounded-full'
+                  />
+                </div>
+                <div>
+                  <h3 className='text-black text-xl font-semibold'>
+                    {testimonial.name}
+                  </h3>
+                  <h3 className='text-base font-medium'>{testimonial.title}</h3>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </motion.div>
       </div>
     </div>
   );

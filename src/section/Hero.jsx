@@ -1,13 +1,31 @@
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
+
 import Button from "../components/Button";
 import Indicator from "../components/Indicator";
 import HeroImage from "../assets/image-1.png";
 import starImage from "../assets/image 2.png";
+import bg from "../assets/Frame 237.png";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS with options
+  }, []);
+
   return (
-    <div className=' flex max-[1100px]:flex-col gap-10 justify-center items-center'>
-      <div className='flex flex-col gap-5'>
-        <div className='flex  max-[1100px]:justify-center max-[1100px]:items-center'>
+    <div
+      className=' flex max-[1100px]:flex-col gap-10 justify-center items-center '
+      data-aos='fade-up'
+      style={{
+        backgroundImage: `url(${bg})`,
+      }}
+    >
+      <div className='flex flex-col gap-5' data-aos='fade-right'>
+        <div
+          className='flex  max-[1100px]:justify-center max-[1100px]:items-center'
+          data-aos='zoom-in'
+        >
           <Indicator
             icon={
               <svg
@@ -25,7 +43,10 @@ const Hero = () => {
             Available for work
           </Indicator>
         </div>
-        <div className=' flex flex-col gap-5 justify-center items-start max-[1100px]:items-center max-[1100px]:mb-16 '>
+        <div
+          className=' flex flex-col gap-5 justify-center items-start max-[1100px]:items-center max-[1100px]:mb-16 '
+          data-aos='fade-left'
+        >
           <h1 className='max-[1100px]:text-center text-4xl font-bold font-Bricolage'>
             Hello! <span className=' text-primary'>I’m Emmanuel Aina</span>
           </h1>
@@ -42,7 +63,10 @@ const Hero = () => {
       </div>
 
       {/* Image */}
-      <div className=' relative border border-primary rounded-full p-[35px] '>
+      <div
+        className=' relative border border-primary rounded-full p-[35px] '
+        data-aos='zoom-in'
+      >
         <div className=' flex absolute top-[5%] -translate-y-[5%] left-[2%] -translate-x-[2%]  '>
           <Indicator variant={"primary"} icon={<img src={starImage} />}>
             User Reaserch
@@ -53,7 +77,7 @@ const Hero = () => {
             Prototyping
           </Indicator>
         </div>
-        <div className=' flex text-nowrap justify-center items-center absolute top-[10%] -translate-y-[10%] left-[110%] -translate-x-[110%]  '>
+        <div className=' flex text-nowrap justify-center items-center absolute top-[10%] -translate-y-[10%] left-[110%] -translate-x-[110%]'>
           <Indicator variant={"primary"} icon={<img src={starImage} />}>
             Product Design
           </Indicator>

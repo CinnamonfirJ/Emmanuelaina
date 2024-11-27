@@ -30,7 +30,7 @@ const SectionHead = ({ icon, title }) => {
             <div key={index} className={`w-[1px] ${height} bg-[#DDE5ED]`} />
           ))}
         </div>
-        <div className='flex-grow h-[1px]bg-[#DDE5ED]' />
+        <div className='flex-grow h-[1px] bg-[#DDE5ED] w-full' />
       </div>
     </div>
   );

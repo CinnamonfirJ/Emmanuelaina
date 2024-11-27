@@ -6,8 +6,16 @@ import mindset from "../assets/Vector.png";
 import design from "../assets/game-icons_wireframe-globe.png";
 import software from "../assets/healthicons_virus-research-outline.png";
 import analytical from "../assets/teenyicons_ab-testing-outline.png";
+import bg from "../assets/Frame 237.png";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const skills = [
     { icon: mindset, title: "User-Centered Mindset" },
     { icon: design, title: "Visual Design Skills" },
@@ -22,10 +30,17 @@ const About = () => {
 
   return (
     <div className='flex flex-col gap-8 justify-center items-center'>
-      <div className='flex justify-center items-center w-full'>
+      <div
+        className='flex justify-center items-center w-full'
+        data-aos='fade-up'
+      >
         <SectionHead icon={about} title={"About Me"} />
       </div>
-      <div className='flex justify-center items-center'>
+      <div
+        className='flex justify-center items-center'
+        data-aos='fade-up'
+        data-aos-delay='200'
+      >
         <p className='max-w-[1150px] text-center text-lg'>
           Hi, I'm Emmanuel Aina, a UI/UX designer with over 2 years of
           experience creating intuitive digital products. My passion for
@@ -42,27 +57,42 @@ const About = () => {
           lasting impact.
         </p>
       </div>
-      <div className='grid grid-cols-3 gap-8'>
+      <div
+        className='grid grid-cols-3 gap-8'
+        data-aos='fade-up'
+        data-aos-delay='300'
+      >
         <div className='col-span-1'>
           <img src={left} alt='left' />
         </div>
-        <div className='flex justify-center items-center'>
+        <div
+          className='flex justify-center items-center'
+          data-aos='zoom-in'
+          data-aos-delay='400'
+        >
           <h1 className='text-5xl font-bold tracking-wide'>
             E <span className='text-primary'>A</span>
           </h1>
         </div>
         <div className='col-span-1'>
-          <img src={right} alt='left' />
+          <img src={right} alt='right' />
         </div>
       </div>
-      {/* Experience  */}
-      <div className='relative flex justify-center items-center bg-gray-50'>
-        {/* Skills Grid */}
+
+      {/* Skills */}
+      <div
+        className='relative flex justify-center items-center bg-gray-50'
+        data-aos='fade-up'
+        data-aos-delay='500'
+      >
         <div className='grid grid-cols-4 max-md:grid-cols-2 gap-5 max-md:gap-12'>
           {skills.map((skill, i) => (
             <div key={i} className='flex justify-center items-center gap-8'>
-              {/* Skill Icon and Title */}
-              <div className='flex flex-col justify-center items-center gap-3'>
+              <div
+                className='flex flex-col justify-center items-center gap-3'
+                data-aos='fade-up'
+                data-aos-delay={`${600 + i * 100}`}
+              >
                 <div className='flex justify-center items-center rounded-full border border-[#DDE5ED] w-[60px] h-[60px]'>
                   <div className='flex justify-center items-center rounded-full w-[45px] h-[45px] bg-gradient-to-b from-primary to-secondary'>
                     <img src={skill.icon} alt='icon' />
@@ -72,49 +102,27 @@ const About = () => {
                   <h3>{skill.title}</h3>
                 </div>
               </div>
-
-              {/* Vertical Line (conditionally rendered) */}
               {i !== skills.length - 1 && (
                 <div className='h-[90px] max-md:hidden bg-[#DDE5ED] w-[1px] mx-2'></div>
               )}
             </div>
           ))}
         </div>
-
-        {/* Central Component */}
-        <div className='absolute flex-col items-center justify-cente hidden max-md:flex'>
-          <svg
-            width='354'
-            height='249'
-            viewBox='0 0 354 249'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <line
-              x1='176.5'
-              y1='2.18557e-08'
-              x2='176.5'
-              y2='90'
-              stroke='#DDE5ED'
-            />
-            <line x1='176.5' y1='159' x2='176.5' y2='249' stroke='#DDE5ED' />
-            <line
-              x1='4.37114e-08'
-              y1='132.5'
-              x2='354'
-              y2='132.5'
-              stroke='#DDE5ED'
-            />
-          </svg>
-        </div>
       </div>
 
       {/* Experience */}
-      <div className='grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] border-grayBorder'>
+      <div
+        className={`grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] max-md:p-[48px] border-grayBorder bg-cover bg-center`}
+        data-aos='fade-up'
+        data-aos-delay='800'
+      >
         {experiences.map((experience, i) => (
           <div
             key={i}
             className='flex flex-col justify-center items-center gap-[26px]'
+            style={{
+              backgroundImage: `url(${bg})`,
+            }}
           >
             <div className='flex flex-col justify-center items-center rounded-[20px] border custom-border border-grayBorder w-[223px] h-[150px]'>
               <div className='flex justify-center items-center rounded-full font-black text-6xl'>

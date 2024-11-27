@@ -2,12 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { faqData as initialFaqData } from "../data/faqData";
 import SectionHead from "../components/SectionHead";
 import faq from "../assets/wpf_faq.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FAQs = () => {
   const [faqData, setFaqData] = useState(initialFaqData);
   const faqSectionRef = useRef();
 
   useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS with desired settings
+
     const faqSection = faqSectionRef.current;
     if (!faqSection) return;
 
@@ -39,18 +43,28 @@ const FAQs = () => {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center gap-8 overflow-hidden'>
+    <div
+      className='flex flex-col justify-center items-center gap-8 overflow-hidden'
+      data-aos='fade-up' // AOS animation
+    >
       <div className='flex justify-center items-center w-full'>
         <SectionHead icon={faq} title={"FAQs"} />
       </div>
 
-      <div className='flex flex-col justify-center items-center'>
+      <div
+        className='flex flex-col justify-center items-center'
+        data-aos='zoom-in' // AOS animation
+      >
         <h3 className='text-4xl font-bold max-md:text-xl max-md:font-semibold'>
           Frequently Asked Questions{" "}
         </h3>
       </div>
 
-      <section ref={faqSectionRef} className='md:w-[60%] w-full'>
+      <section
+        ref={faqSectionRef}
+        className='md:w-[60%] w-full'
+        data-aos='fade-up' // AOS animation
+      >
         {faqData.map((faq, i) => (
           <FAQsBox faq={faq} key={i} onToggle={toggleFaqActiveState} />
         ))}
@@ -64,6 +78,7 @@ function FAQsBox({ faq, onToggle }) {
     <div
       onClick={() => onToggle(faq.question)}
       className='border rounded-2xl py-2 px-5 mt-3 cursor-pointer'
+      data-aos='flip-up' // AOS animation
     >
       <div
         className={`flex items-center justify-between transition-all ${

@@ -8,8 +8,15 @@ import project4 from "../assets/project4.png";
 import project5 from "../assets/project5.png";
 import project6 from "../assets/project6.png";
 import Button from "../components/Button";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const Project = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const projects = [
     {
       imgUrl: project1,
@@ -45,15 +52,24 @@ const Project = () => {
 
   return (
     <div className='flex flex-col justify-center items-center gap-8'>
-      <div className='flex justify-center items-center w-full'>
+      <div
+        className='flex justify-center items-center w-full'
+        data-aos='fade-up'
+      >
         <SectionHead icon={myProject} title={"Projects"} />
       </div>
-      <div className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12'>
+      <div
+        className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12'
+        data-aos='fade-up'
+        data-aos-delay='200'
+      >
         {/* Projects */}
         {projects.map((project, i) => (
           <div
             key={i}
             className='border border-grayBorder rounded-xl bg-[#F8FAFC]'
+            data-aos='zoom-in'
+            data-aos-delay={`${300 + i * 100}`}
           >
             <div className='flex flex-col justify-center items-start gap-2'>
               <img src={project.imgUrl} alt='project' />
@@ -67,7 +83,11 @@ const Project = () => {
           </div>
         ))}
       </div>
-      <div className=' flex justify-between items-center max-w-[1140px] w-full'>
+      <div
+        className='flex justify-between items-center max-w-[1140px] w-full'
+        data-aos='fade-up'
+        data-aos-delay='800'
+      >
         <div>
           <h3 className='text-lg font-semibold'>Wanna See More?</h3>
         </div>
