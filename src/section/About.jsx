@@ -1,3 +1,6 @@
+import CountUp from "react-countup";
+import { useEffect, useState } from "react";
+
 import SectionHead from "../components/SectionHead";
 import about from "../assets/User.png";
 import left from "../assets/Frame 27.png";
@@ -9,11 +12,28 @@ import analytical from "../assets/teenyicons_ab-testing-outline.png";
 import bg from "../assets/Frame 237.png";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { useEffect } from "react";
 
 const About = () => {
+  const [startCount, setStartCount] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+
+    // Add scroll event listener to trigger number count
+    const handleScroll = () => {
+      const element = document.querySelector(".grid");
+      if (
+        element &&
+        element.getBoundingClientRect().top <= window.innerHeight
+      ) {
+        setStartCount(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const skills = [
@@ -23,9 +43,9 @@ const About = () => {
     { icon: analytical, title: "Analytical Problem-Solving" },
   ];
   const experiences = [
-    { number: "10+", title: "Design projects" },
-    { number: "2+", title: "Years of Experience" },
-    { number: "3+", title: "Apps Designed" },
+    { number: 10, title: "Design projects" },
+    { number: 2, title: "Years of Experience" },
+    { number: 3, title: "Apps Designed" },
   ];
 
   return (
@@ -113,6 +133,7 @@ const About = () => {
       {/* Experience */}
       <div
         className={`grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] max-md:p-[48px] border-grayBorder bg-cover bg-center`}
+        style={{ backgroundImage: `url(${bg})` }}
         data-aos='fade-up'
         data-aos-delay='800'
       >
@@ -120,13 +141,17 @@ const About = () => {
           <div
             key={i}
             className='flex flex-col justify-center items-center gap-[26px]'
-            style={{
-              backgroundImage: `url(${bg})`,
-            }}
           >
             <div className='flex flex-col justify-center items-center rounded-[20px] border custom-border border-grayBorder w-[223px] h-[150px]'>
               <div className='flex justify-center items-center rounded-full font-black text-6xl'>
-                <h1>{experience.number}</h1>
+                {startCount && (
+                  <CountUp
+                    start={20}
+                    end={experience.number}
+                    duration={3} // Animation duration in seconds
+                    separator=','
+                  />
+                )}
               </div>
               <div className='font-semibold text-lg text-background text-center leading-none'>
                 <h3>{experience.title}</h3>
