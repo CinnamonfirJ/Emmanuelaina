@@ -9,22 +9,22 @@ const socials = [
   {
     name: "Facebook",
     imgUrl: facebook,
-    href: "#",
+    href: "https://www.facebook.com/share/1Goe3FhH7D/?mibextid=LQQJ4d",
   },
   {
     name: "Instagram",
     imgUrl: instagram,
-    href: "#",
+    href: "https://www.instagram.com/tolu.web3/profilecard/?igsh=MTJqMW1wZml4MHQyZw==",
   },
   {
     name: "TwitterX",
     imgUrl: x,
-    href: "#",
+    href: "https://x.com/tolu_web3?s=21",
   },
   {
     name: "Whatsapp",
     imgUrl: whatsapp,
-    href: "#",
+    href: "https://wa.link/dryhi6",
   },
 ];
 
@@ -54,6 +54,7 @@ const Footer = () => {
           <a
             key={i}
             href={social.href}
+            target='_blank'
             aria-label={social.name}
             className='bg-black text-white rounded-full w-[60px] h-[60px] max-md:w-[40px] max-md:h-[40px] flex justify-center items-center '
           >

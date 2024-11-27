@@ -128,11 +128,37 @@ const About = () => {
             </div>
           ))}
         </div>
+        {/* Central Component */}
+        <div className='absolute flex-col items-center justify-cente hidden max-md:flex'>
+          <svg
+            width='354'
+            height='249'
+            viewBox='0 0 354 249'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <line
+              x1='176.5'
+              y1='2.18557e-08'
+              x2='176.5'
+              y2='90'
+              stroke='#DDE5ED'
+            />
+            <line x1='176.5' y1='159' x2='176.5' y2='249' stroke='#DDE5ED' />
+            <line
+              x1='4.37114e-08'
+              y1='132.5'
+              x2='354'
+              y2='132.5'
+              stroke='#DDE5ED'
+            />
+          </svg>
+        </div>
       </div>
 
       {/* Experience */}
       <div
-        className={`grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] max-md:p-[48px] border-grayBorder bg-cover bg-center`}
+        className={`grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] max-md:p-[40px] border-grayBorder bg-cover bg-center`}
         style={{ backgroundImage: `url(${bg})` }}
         data-aos='fade-up'
         data-aos-delay='800'
@@ -142,7 +168,7 @@ const About = () => {
             key={i}
             className='flex flex-col justify-center items-center gap-[26px]'
           >
-            <div className='flex flex-col justify-center items-center rounded-[20px] border custom-border border-grayBorder w-[223px] h-[150px]'>
+            <div className='flex flex-col justify-center items-center rounded-[20px] border custom-border border-grayBorder w-[300px] h-[180px]'>
               <div className='flex justify-center items-center rounded-full font-black text-6xl'>
                 {startCount && (
                   <CountUp
