@@ -147,9 +147,9 @@ const About = () => {
             <line x1='176.5' y1='159' x2='176.5' y2='249' stroke='#DDE5ED' />
             <line
               x1='4.37114e-08'
-              y1='132.5'
+              y1='127'
               x2='354'
-              y2='132.5'
+              y2='127'
               stroke='#DDE5ED'
             />
           </svg>
@@ -158,7 +158,7 @@ const About = () => {
 
       {/* Experience */}
       <div
-        className={`grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] max-md:p-[40px] border-grayBorder bg-cover bg-center`}
+        className={`grid grid-cols-3 max-md:grid-cols-1 gap-[26px] rounded-[20px] border p-[20px] max-md:p-[38px] border-grayBorder bg-cover bg-center`}
         style={{ backgroundImage: `url(${bg})` }}
         data-aos='fade-up'
         data-aos-delay='800'
@@ -168,7 +168,7 @@ const About = () => {
             key={i}
             className='flex flex-col justify-center items-center gap-[26px]'
           >
-            <div className='flex flex-col justify-center items-center rounded-[20px] border custom-border border-grayBorder w-[300px] h-[180px]'>
+            <div className='flex flex-col justify-center items-center rounded-[20px] border custom-border border-grayBorder w-[280px] h-[180px]'>
               <div className='flex justify-center items-center rounded-full font-black text-6xl'>
                 {startCount && (
                   <CountUp
