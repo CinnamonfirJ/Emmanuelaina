@@ -1,21 +1,21 @@
-import mindset from "../assets/Vector.png";
-import design from "../assets/game-icons_wireframe-globe.png";
-import software from "../assets/healthicons_virus-research-outline.png";
-import analytical from "../assets/teenyicons_ab-testing-outline.png";
-import survey from "../assets/Survey.png";
-import ui from "../assets/iconoir_design-nib.png";
+// import mindset from "../assets/Vector.png";
+// import design from "../assets/game-icons_wireframe-globe.png";
+// import software from "../assets/healthicons_virus-research-outline.png";
+// import analytical from "../assets/teenyicons_ab-testing-outline.png";
+// import survey from "../assets/Survey.png";
+// import ui from "../assets/iconoir_design-nib.png";
 
 import pikaso from "../assets/pikaso_texttoimage_ceo-about-to-speak-in-a-video-looking-handsome-wit 1.png";
 import star from "../assets/star.png";
 import fifty from "../assets/FIFTY XCHANGE 2 1.png";
 import qoute from "../assets/”.png";
 
-import img1 from "../assets/image (2).png";
-import img2 from "../assets/image-1 (2).png";
-import img3 from "../assets/image-2.png";
-import img4 from "../assets/image-3.png";
-import img5 from "../assets/image-4.png";
-import img6 from "../assets/image-5.png";
+// import img1 from "../assets/image (2).png";
+// import img2 from "../assets/image-1 (2).png";
+// import img3 from "../assets/image-2.png";
+// import img4 from "../assets/image-3.png";
+// import img5 from "../assets/image-4.png";
+// import img6 from "../assets/image-5.png";
 
 export default function ResumeTimeline() {
   let stars = [];
@@ -24,82 +24,82 @@ export default function ResumeTimeline() {
     stars.push(<img src={star} alt='star' key={i} />);
   }
 
-  const qualifications = [
-    {
-      icon: img1,
-      title: "Royal International Schools",
-      description: "Basic Education (Creche-Basic 6)",
-      date: "2007-2016",
-    },
-    {
-      icon: img2,
-      title: "Lagos State Model College, Meiran",
-      description: "JSS1-SS3",
-      date: "Sept 2016-2022",
-    },
-    {
-      icon: img4,
-      title: "University of Ibadan",
-      description: "Bsc (Political Science)",
-      date: "Sept 2024-Present",
-    },
-  ];
+  // const qualifications = [
+  //   {
+  //     icon: img1,
+  //     title: "Royal International Schools",
+  //     description: "Basic Education (Creche-Basic 6)",
+  //     date: "2007-2016",
+  //   },
+  //   {
+  //     icon: img2,
+  //     title: "Lagos State Model College, Meiran",
+  //     description: "JSS1-SS3",
+  //     date: "Sept 2016-2022",
+  //   },
+  //   {
+  //     icon: img4,
+  //     title: "University of Ibadan",
+  //     description: "Bsc (Political Science)",
+  //     date: "Sept 2024-Present",
+  //   },
+  // ];
 
-  const experiences = [
-    {
-      icon: img6,
-      title: "Parach ICT Academy",
-      description: "UI/UX Designer",
-      date: "Feb 2021-2022",
-    },
-    {
-      icon: img3,
-      title: "Artificial Empire",
-      description: "UI/UX Designer",
-      date: "Jan 2022-2023",
-    },
-    {
-      icon: img5,
-      title: "Fifty Crypto Exhange",
-      description: "UI/UX Designer",
-      date: "Jan 2023-Present",
-    },
-  ];
+  // const experiences = [
+  //   {
+  //     icon: img6,
+  //     title: "Parach ICT Academy",
+  //     description: "UI/UX Designer",
+  //     date: "Feb 2021-2022",
+  //   },
+  //   {
+  //     icon: img3,
+  //     title: "Artificial Empire",
+  //     description: "UI/UX Designer",
+  //     date: "Jan 2022-2023",
+  //   },
+  //   {
+  //     icon: img5,
+  //     title: "Fifty Crypto Exhange",
+  //     description: "UI/UX Designer",
+  //     date: "Jan 2023-Present",
+  //   },
+  // ];
 
-  const services = [
-    {
-      icon: mindset,
-      title: "User Flow",
-      description:
-        "Mapping the User Journey to Enhance Navigation and Experience",
-    },
-    {
-      icon: design,
-      title: "Wireframing",
-      description: "Creating Visual Blueprints for Effective Design Solutions",
-    },
-    {
-      icon: software,
-      title: "User Research",
-      description: "Understanding User Needs to Drive Design Decisions",
-    },
-    {
-      icon: analytical,
-      title: "User Survey",
-      description: "Collecting Valuable Insights to Inform Design Decisions",
-    },
-    {
-      icon: survey,
-      title: "UI Design",
-      description:
-        "Crafting Visually Engaging Interfaces for Seamless Interaction",
-    },
-    {
-      icon: ui,
-      title: "User Testing",
-      description: "Validating Designs Through Real User Feedback",
-    },
-  ];
+  // const services = [
+  //   {
+  //     icon: mindset,
+  //     title: "User Flow",
+  //     description:
+  //       "Mapping the User Journey to Enhance Navigation and Experience",
+  //   },
+  //   {
+  //     icon: design,
+  //     title: "Wireframing",
+  //     description: "Creating Visual Blueprints for Effective Design Solutions",
+  //   },
+  //   {
+  //     icon: software,
+  //     title: "User Research",
+  //     description: "Understanding User Needs to Drive Design Decisions",
+  //   },
+  //   {
+  //     icon: analytical,
+  //     title: "User Survey",
+  //     description: "Collecting Valuable Insights to Inform Design Decisions",
+  //   },
+  //   {
+  //     icon: survey,
+  //     title: "UI Design",
+  //     description:
+  //       "Crafting Visually Engaging Interfaces for Seamless Interaction",
+  //   },
+  //   {
+  //     icon: ui,
+  //     title: "User Testing",
+  //     description: "Validating Designs Through Real User Feedback",
+  //   },
+  // ];
 
   return (
     <div className='flex flex-col justify-center items-center gap-14 my-[70px] mx-[48px] max-md:mx-3 overflow-hidden'>
@@ -142,16 +142,19 @@ export default function ResumeTimeline() {
           </div>
         </div>
       </div>
+
+      {/* 
       <div className='container mx-auto p-6'>
         <div className='grid md:grid-cols-2 gap-12'>
           {/* Qualifications Column */}
+      {/* 
           <div className='space-y-6'>
             <h2 className='text-2xl font-bold mb-8'>Qualifications</h2>
             <div className='relative'>
               <div className='absolute left-2 top-0 bottom-0 w-0.5 bg-[#DDE5ED]' />
 
               {/* Royal International Schools */}
-
+      {/*  
               {qualifications.map((qualification, i) => (
                 <div key={i} className='relative pl-10 pb-12'>
                   <div className='absolute left-0 p-2 bg-purple-500 rounded-full' />
@@ -197,8 +200,10 @@ export default function ResumeTimeline() {
               ))}
             </div>
           </div>
+          */}
 
-          {/* Experience Column */}
+      {/* Experience Column */}
+      {/* 
           <div className='space-y-6'>
             <h2 className='text-2xl font-bold mb-8'>Experience</h2>
             <div className='relative'>
@@ -251,7 +256,9 @@ export default function ResumeTimeline() {
           </div>
         </div>
       </div>
-      <div className='container mx-auto px-4 py-12'>
+
+       */}
+      {/* <div className='container mx-auto px-4 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {services.map((service, index) => (
             <div
@@ -274,7 +281,7 @@ export default function ResumeTimeline() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

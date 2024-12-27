@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
 
-const Project = () => {
+const AllProject = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -55,6 +55,7 @@ const Project = () => {
       link: "/",
     },
   ];
+
   return (
     <div className='flex flex-col justify-center items-center gap-8'>
       <div
@@ -86,7 +87,7 @@ const Project = () => {
                   </p>
                   <div>
                     <a
-                      href='/more'
+                      href={project.link}
                       className='flex justify-center items-center gap-2 bg-primary rounded-full py-1 px-2 text-gray-200'
                     >
                       <div>View</div>
@@ -101,7 +102,7 @@ const Project = () => {
           </div>
         ))}
       </div>
-      <div
+      {/* <div
         className='flex justify-between items-center max-w-[1140px] w-full'
         data-aos='fade-up'
         data-aos-delay='800'
@@ -119,9 +120,9 @@ const Project = () => {
             </Button>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Project;
+export default AllProject;

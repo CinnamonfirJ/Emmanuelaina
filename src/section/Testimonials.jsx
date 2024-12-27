@@ -122,15 +122,6 @@ const Testimonials = () => {
             </p>
           </div>
           <div className='pb-6 w-full'>
-            {/* <svg
-              width='601'
-              height='1'
-              viewBox='0 0 601 1'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <line y1='0.5' x2='601' y2='0.5' stroke='#000000' />
-            </svg> */}
             <div className='h-[1px] bg-[#DDE5ED]'></div>
           </div>
 
