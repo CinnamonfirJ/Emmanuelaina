@@ -11,7 +11,6 @@ import project7 from "../assets/projects/project7.png";
 import project8 from "../assets/projects/project8.png";
 import project9 from "../assets/projects/project9.png";
 
-import Button from "../components/Button";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
@@ -104,18 +103,17 @@ const AllProject = () => {
               <img src={project.imgUrl} alt='project' />
               <div className='flex flex-col justify-center items-start gap-3 px-4 py-1 w-full'>
                 <h3 className='text-xl font-semibold'>{project.title}</h3>
-                <div className='flex justify-between items-center w-full'>
+                <div className='flex justify-between items-center pb-2 w-full'>
                   <p className='text-base text-background font-medium'>
                     {project.category}
                   </p>
                   <div>
                     <a
                       href={project.link}
-                      target='_blank'
                       className='flex justify-center items-center gap-2 bg-primary rounded-full py-1 px-2 text-gray-200'
                     >
                       <div>
-                        <Link2 size={20} />
+                        <Link2 />
                       </div>
                       <div>
                         <img src={arrow} alt='arrow' />

@@ -11,6 +11,7 @@ import Button from "../components/Button";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
+import { Link2 } from "lucide-react";
 
 const Project = () => {
   useEffect(() => {
@@ -20,41 +21,42 @@ const Project = () => {
   const projects = [
     {
       imgUrl: project1,
-      title: "Fifty Crypto Settings",
-      category: "Fintech-Paid Project",
-      link: "/",
+      title: "ChatNaija - AI Chatbot",
+      category: "AI-Team Project",
+      link: "https://chat-naija-ai.vercel.app/",
     },
     {
       imgUrl: project2,
-      title: "Admin Management Dashboard",
+      title: "Fifty Crypto Exchange (App)",
       category: "Fintech-Paid Project",
-      link: "/",
+      link: "https://www.behance.net/gallery/211947745/Fifty-Xchange-App",
     },
     {
       imgUrl: project3,
-      title: "Crypto App Sign Up",
-      category: "Fintech-Paid Project",
-      link: "/",
+      title: "Fifty Crypto Exchange (Web)",
+      category: "Web3 Fintech-Paid Project",
+      link: "https://www.behance.net/gallery/214671509/Fifty-Xchange",
     },
     {
       imgUrl: project4,
       title: "Burna Coin (Tap to Earn)",
-      category: "Web 3 Memecoin-Paid Project",
-      link: "/",
+      category: "Web3 Memecoin-Personal Project",
+      link: "https://www.behance.net/gallery/214716603/Burna-Coin",
     },
     {
       imgUrl: project5,
       title: "Shopswap",
-      category: "E Commerce- Personal Project",
-      link: "/",
+      category: "E Commerce-Personal Project",
+      link: "https://www.behance.net/gallery/201544379/ShopSwap-E-Commerce-App",
     },
     {
       imgUrl: project6,
       title: "Metamint NFT Dashboard",
-      category: "Web3 Fintech-Paid Project",
-      link: "/",
+      category: "Web3 Fintech-Personal Project",
+      link: "https://www.behance.net/gallery/202765619/NFT-Dashboard-Design",
     },
   ];
+
   return (
     <div className='flex flex-col justify-center items-center gap-8'>
       <div
@@ -80,16 +82,18 @@ const Project = () => {
               <img src={project.imgUrl} alt='project' />
               <div className='flex flex-col justify-center items-start gap-3 px-4 py-1 w-full'>
                 <h3 className='text-xl font-semibold'>{project.title}</h3>
-                <div className='flex justify-between items-center w-full'>
+                <div className='flex justify-between items-center pb-2 w-full'>
                   <p className='text-base text-background font-medium'>
                     {project.category}
                   </p>
                   <div>
                     <a
-                      href='/more'
+                      href={project.link}
                       className='flex justify-center items-center gap-2 bg-primary rounded-full py-1 px-2 text-gray-200'
                     >
-                      <div>View</div>
+                      <div>
+                        <Link2 />
+                      </div>
                       <div>
                         <img src={arrow} alt='arrow' />
                       </div>
