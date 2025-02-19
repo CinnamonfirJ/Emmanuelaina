@@ -78,16 +78,16 @@ const Project = () => {
             data-aos='zoom-in'
             data-aos-delay={`${300 + i * 100}`}
           >
-            <div className='flex flex-col justify-center items-start gap-2'>
+            <div className='flex flex-col justify-center mt-auto h-full gap-2'>
               <img
                 src={project.imgUrl}
                 alt='project'
                 className='w-full h-full'
               />
-              <div className='flex flex-col justify-center items-start gap-3 px-4 py-1 w-full'>
+              <div className='flex flex-col justify-end gap-3 px-4 py-1 w-full'>
                 <h3 className='text-xl font-semibold'>{project.title}</h3>
                 <div className='flex justify-between items-center pb-2 w-full'>
-                  <p className='text-base text-background font-medium'>
+                  <p className='text-background font-medium'>
                     {project.category}
                   </p>
                   <div>
