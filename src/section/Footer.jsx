@@ -30,7 +30,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className='bg-[#F2F2F2] text-center pt-10 flex flex-col justify-center items-center gap-8'>
+    <footer className='bg-[#F2F2F2] text-center w-full pt-10 flex flex-col justify-center items-center gap-8'>
       <div className='grid grid-cols-3 gap-8'>
         <div className='col-span-1'>
           <img src={left} alt='left' />

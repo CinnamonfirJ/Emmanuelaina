@@ -5,7 +5,7 @@ import More from "./pages/More";
 
 export default function App() {
   return (
-    <div className=''>
+    <div className='w-full'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Landing />} />

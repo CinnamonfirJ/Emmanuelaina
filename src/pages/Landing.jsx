@@ -9,22 +9,22 @@ import Testimonials from "../section/Testimonials";
 const Landing = () => {
   return (
     <div>
-      <section id='hero' className='container mx-auto my-[65px]'>
+      <section id='hero' className=' my-[65px] mx-[48px] max-md:mx-3'>
         <Hero />
       </section>
-      <section id='about' className='container mx-auto my-[65px]'>
+      <section id='about' className=' my-[65px] mx-[48px] max-md:mx-3'>
         <About />
       </section>
-      <section id='projects' className='container mx-auto my-[65px]'>
+      <section id='projects' className=' my-[65px] mx-[48px] max-md:mx-3'>
         <Project />
       </section>
-      <section id='testimonials' className='container mx-auto my-[65px]'>
+      <section id='testimonials' className=' my-[65px] mx-[48px] max-md:mx-3'>
         <Testimonials />
       </section>
-      <section className='container mx-auto my-[65px]'>
+      <section className=' my-[65px] mx-[48px] max-md:mx-3'>
         <FAQs />
       </section>
-      <section className='container mx-auto my-[65px]'>
+      <section className=' my-[65px] mx-[48px] max-md:mx-3'>
         <Stack />
       </section>
       <section id='contact'>
