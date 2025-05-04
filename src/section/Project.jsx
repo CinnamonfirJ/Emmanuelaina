@@ -66,7 +66,7 @@ const Project = () => {
         <SectionHead icon={myProject} title={"Projects"} />
       </div>
       <div
-        className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12'
+        className='gap-12 grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2'
         data-aos='fade-up'
         data-aos-delay='200'
       >
@@ -74,26 +74,26 @@ const Project = () => {
         {projects.map((project, i) => (
           <div
             key={i}
-            className='border border-grayBorder rounded-xl bg-[#F8FAFC]'
+            className='bg-[#F8FAFC] border border-grayBorder rounded-xl'
             data-aos='zoom-in'
             data-aos-delay={`${300 + i * 100}`}
           >
-            <div className='flex flex-col justify-center mt-auto h-full gap-2'>
+            <div className='flex flex-col justify-center gap-2 mt-auto rounded-xl h-full'>
               <img
                 src={project.imgUrl}
                 alt='project'
-                className='w-full h-full'
+                className='rounded-xl w-full h-full'
               />
               <div className='flex flex-col justify-end gap-3 px-4 py-1 w-full'>
-                <h3 className='text-xl font-semibold'>{project.title}</h3>
+                <h3 className='font-semibold text-xl'>{project.title}</h3>
                 <div className='flex justify-between items-center pb-2 w-full'>
-                  <p className='text-background font-medium'>
+                  <p className='font-medium text-background'>
                     {project.category}
                   </p>
                   <div>
                     <a
                       href={project.link}
-                      className='flex justify-center items-center gap-2 bg-primary rounded-full py-1 px-2 text-gray-200'
+                      className='flex justify-center items-center gap-2 bg-primary px-2 py-1 rounded-full text-gray-200'
                     >
                       <div>
                         <Link2 />
@@ -110,12 +110,12 @@ const Project = () => {
         ))}
       </div>
       <div
-        className='flex justify-between items-center max-w-[1140px] w-full'
+        className='flex justify-between items-center w-full max-w-[1140px]'
         data-aos='fade-up'
         data-aos-delay='800'
       >
         <div>
-          <h3 className='text-lg font-semibold'>Wanna See More?</h3>
+          <h3 className='font-semibold text-lg'>Wanna See More?</h3>
         </div>
         <div>
           <a href='/more'>
