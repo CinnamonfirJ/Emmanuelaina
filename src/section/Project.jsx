@@ -74,35 +74,36 @@ const Project = () => {
         {projects.map((project, i) => (
           <div
             key={i}
-            className='bg-[#F8FAFC] border border-grayBorder rounded-xl'
+            className='bg-[#F8FAFC] border border-grayBorder rounded-xl overflow-hidden'
             data-aos='zoom-in'
             data-aos-delay={`${300 + i * 100}`}
           >
-            <div className='flex flex-col justify-center gap-2 mt-auto rounded-xl h-full'>
-              <img
-                src={project.imgUrl}
-                alt='project'
-                className='rounded-xl w-full h-full'
-              />
-              <div className='flex flex-col justify-end gap-3 px-4 py-1 w-full'>
+            <div className='flex flex-col justify-between h-full'>
+              {/* Image Container with fixed aspect ratio */}
+              <div className='rounded-t-xl w-full aspect-[16/9] overflow-hidden'>
+                <img
+                  src={project.imgUrl}
+                  alt={project.title}
+                  className='w-full h-full object-cover'
+                  loading='lazy'
+                  draggable={false}
+                />
+              </div>
+
+              {/* Text & Link Content */}
+              <div className='flex flex-col justify-between gap-3 px-4 py-3'>
                 <h3 className='font-semibold text-xl'>{project.title}</h3>
-                <div className='flex justify-between items-center pb-2 w-full'>
+                <div className='flex justify-between items-center'>
                   <p className='font-medium text-background'>
                     {project.category}
                   </p>
-                  <div>
-                    <a
-                      href={project.link}
-                      className='flex justify-center items-center gap-2 bg-primary px-2 py-1 rounded-full text-gray-200'
-                    >
-                      <div>
-                        <Link2 />
-                      </div>
-                      <div>
-                        <img src={arrow} alt='arrow' />
-                      </div>
-                    </a>
-                  </div>
+                  <a
+                    href={project.link}
+                    className='flex items-center gap-2 bg-primary px-3 py-1 rounded-full text-gray-200'
+                  >
+                    <Link2 size={16} />
+                    <img src={arrow} alt='arrow' className='w-4 h-4' />
+                  </a>
                 </div>
               </div>
             </div>

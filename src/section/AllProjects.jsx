@@ -10,6 +10,7 @@ import project6 from "../assets/projects/project6.png";
 import project7 from "../assets/projects/project7.png";
 import project8 from "../assets/projects/project8.png";
 import project9 from "../assets/projects/project9.png";
+import project10 from "../assets/projects/project10.png";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -76,6 +77,12 @@ const AllProject = () => {
       category: "Web3 Fintech-Paid Project",
       link: "https://www.behance.net/gallery/200587595/Web3-Financial-OS-Bank-Settings-Section",
     },
+    {
+      imgUrl: project10,
+      title: "Webloom Waitlist Page",
+      category: "Saas Project",
+      link: "https://www.behance.net/gallery/228488887/Webloom-Waitlist-Page",
+    },
   ];
 
   return (
@@ -87,7 +94,7 @@ const AllProject = () => {
         <SectionHead icon={myProject} title={"Projects"} />
       </div>
       <div
-        className='grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-12'
+        className='gap-12 grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2'
         data-aos='fade-up'
         data-aos-delay='200'
       >
@@ -95,35 +102,36 @@ const AllProject = () => {
         {projects.map((project, i) => (
           <div
             key={i}
-            className='border border-grayBorder rounded-xl bg-[#F8FAFC]'
+            className='bg-[#F8FAFC] border border-grayBorder rounded-xl overflow-hidden'
             data-aos='zoom-in'
             data-aos-delay={`${300 + i * 100}`}
           >
-            <div className='flex flex-col justify-center items-start gap-2'>
-              <img
-                src={project.imgUrl}
-                alt='project'
-                className='w-full bg-contain'
-              />
-              <div className='flex flex-col justify-center items-start gap-3 px-4 py-1 w-full'>
-                <h3 className='text-xl font-semibold'>{project.title}</h3>
-                <div className='flex justify-between items-center pb-2 w-full'>
-                  <p className='text-base text-background font-medium'>
+            <div className='flex flex-col justify-between h-full'>
+              {/* Image Container with fixed aspect ratio */}
+              <div className='rounded-t-xl w-full aspect-[16/9] overflow-hidden'>
+                <img
+                  src={project.imgUrl}
+                  alt={project.title}
+                  className='w-full h-full object-cover'
+                  loading='lazy'
+                  draggable={false}
+                />
+              </div>
+
+              {/* Text & Link Content */}
+              <div className='flex flex-col justify-between gap-3 px-4 py-3'>
+                <h3 className='font-semibold text-xl'>{project.title}</h3>
+                <div className='flex justify-between items-center'>
+                  <p className='font-medium text-background'>
                     {project.category}
                   </p>
-                  <div>
-                    <a
-                      href={project.link}
-                      className='flex justify-center items-center gap-2 bg-primary rounded-full py-1 px-2 text-gray-200'
-                    >
-                      <div>
-                        <Link2 />
-                      </div>
-                      <div>
-                        <img src={arrow} alt='arrow' />
-                      </div>
-                    </a>
-                  </div>
+                  <a
+                    href={project.link}
+                    className='flex items-center gap-2 bg-primary px-3 py-1 rounded-full text-gray-200'
+                  >
+                    <Link2 size={16} />
+                    <img src={arrow} alt='arrow' className='w-4 h-4' />
+                  </a>
                 </div>
               </div>
             </div>
@@ -131,12 +139,12 @@ const AllProject = () => {
         ))}
       </div>
       {/* <div
-        className='flex justify-between items-center max-w-[1140px] w-full'
+        className='flex justify-between items-center w-full max-w-[1140px]'
         data-aos='fade-up'
         data-aos-delay='800'
       >
         <div>
-          <h3 className='text-lg font-semibold'>Wanna See More?</h3>
+          <h3 className='font-semibold text-lg'>Wanna See More?</h3>
         </div>
         <div>
           <a href='/more'>
